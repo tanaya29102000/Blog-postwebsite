@@ -23,7 +23,7 @@ const UpdatePost = () => {
       setLoading(true);
       if (id) {
         try {
-          const response = await axios.get(`http://localhost:8080/api/posts/${id}`);
+          const response = await axios.get(`https://blog-postwebsite.vercel.app/api/posts/${id}`);
           const post = response.data;
           setInitialValues({
             title: post.title,
@@ -90,7 +90,7 @@ const UpdatePost = () => {
       }
 
       // Update existing post
-      const response = await axios.put(`http://localhost:8080/api/posts/${id}`, {
+      const response = await axios.put(`https://blog-postwebsite.vercel.app/api/posts/${id}`, {
         title: values.title,
         content: values.content,
         author: values.author,

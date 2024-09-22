@@ -57,7 +57,7 @@ const CreatePost = () => {
         image: imageUrl,
       };
 
-      await axios.post("http://localhost:8080/api/posts", postData);
+      await axios.post("https://blog-postwebsite.vercel.app/api/posts", postData);
       console.log(postData); // Redirect after 2 seconds
       setTimeout(() => navigate("/home"), 1000);
     } catch (error) {
