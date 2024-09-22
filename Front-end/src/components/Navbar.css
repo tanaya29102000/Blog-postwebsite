@@ -1,0 +1,66 @@
+/* General navbar styling */
+.navbar {
+    background-color: #13a3f1; /* Green background */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(248, 250, 245, 0.1); /* Slight shadow for effect */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Navbar list for right-side links */
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Left-side item (MyMessages) */
+  .left-side {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Right-side navbar items */
+  .navbar-item {
+    margin-left: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  /* Adding hover effect */
+  .navbar-item:hover {
+    color: #f2ebeb;
+    transition: color 0.3s ease;
+  }
+  
+  /* Make the left-side occupy available space */
+  .navbar-space {
+    flex-grow: 1;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px;
+      flex-direction: column;
+    }
+  
+    .navbar-list {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-item {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+  }
+  
