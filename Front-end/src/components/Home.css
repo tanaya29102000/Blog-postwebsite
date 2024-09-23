@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  background-color: #7ba4d0;
 }
 
 /* Post Title */
@@ -13,123 +14,103 @@
   color: #111111;
 }
 
-/* Post List */
+/* Home.css */
+
+/* Styling for the list of posts */
 .post-list {
-  display: flex; /* Flex for card-style layout */
-  flex-wrap: wrap; /* Allow cards to wrap */
-  justify-content: center; /* Center the cards */
-  gap: 50px; /* Add space between cards */
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  max-width: 1200px; /* Adjust the container width */
-}
-
-/* Post Item */
-.post-item {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  width: 400px;
-  height: auto; /* Allow height to adjust based on content */
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  justify-content: space-between; /* Space out content and actions */
-  box-shadow: 2px 6px rgba(78, 101, 228, 0.05);
-  background: linear-gradient(135deg,#a3cce3,#a3cce3); /* Gradient background */
-  overflow: hidden; /* Prevent overflow */
-  position: relative; /* For potential positioning adjustments */
+  flex-wrap: wrap; /* Allow wrapping to next line */
+  gap: 20px; /* Space between posts */
+  justify-content: center; /* Center the posts horizontally */
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove default list styling */
 }
 
-/* Post Content */
+/* Styling for individual post items */
+.post-item {
+  width: 300px; /* Adjust width to fit three posts in one row */
+  border: 1px solid #ddd; /* Border for each post */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content inside the post */
+  background-color: #fff;
+  margin-bottom: 20px; /* Space between rows */
+}
+
+/* Styling for the post content */
 .post-content {
-  flex: 1;
-  margin-bottom: 10px; /* Space between content and image */
+  margin-bottom: 10px; /* Space between content and buttons */
+  text-align: center; /* Center-align text */
 }
 
-/* Image Container */
+/* Styling for image container */
 .image-container {
-  width: 100%; /* Full width for the image container */
-  height: 180px; /* Fixed height for uniformity */
-  overflow: hidden; /* Hide overflow if image is too large */
-  border-radius: 10px; /* Rounded corners */
-  margin-bottom: 10px; /* Space between image and buttons */
+  margin-bottom: 10px; /* Space between image and content */
 }
 
 .image-container img {
-  width: 100%; /* Make image fill the container */
-  height: 100%; /* Maintain full height */
-  object-fit: cover; /* Cover the container without stretching */
-  border-radius: 10px; /* Rounded corners for the image */
+  max-width: 100%; /* Responsive image */
+  height: auto;
+  border-radius: 5px;
 }
 
-/* Post Actions */
+/* Button container styling */
 .post-actions {
   display: flex;
-  justify-content: space-between; /* Align actions horizontally */
-  gap: 5px; /* Reduce space between buttons */
+  justify-content: center; /* Center buttons horizontally */
+  gap: 10px; /* Space between buttons */
 }
 
-/* Buttons */
-.edit-btn {
-  display: inline-block; /* Make it behave like a button */
-  padding: 10px 20px; /* Add padding */
-  background-color: #2e27ae; /* Background color */
-  color: #ffffff; /* Text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 16px; /* Font size */
-  font-weight: 600; /* Font weight */
-  text-decoration: none; /* Remove underline */
+/* Common button styles */
+ .delete-btn {
+  width: 100px; /* Same width */
+  height: 40px; /* Same height */
+  font-size: 16px; /* Consistent font size */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Cursor to pointer */
   text-align: center; /* Center text */
-  transition: background-color 0.3s ease; /* Smooth background change */
-}
-
-.edit-btn:hover {
-  background-color: #16ddbc; /* Change background color on hover */
-}
-
-.edit-btn:disabled {
-  background-color: #bdc3c7; /* Color for disabled state */
-  cursor: not-allowed; /* Change cursor */
-}
-
-
-.delete-btn {
-  color: white;
-  border: none;
-  padding: 10px 10px; /* Smaller padding for a compact button */
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 12px; /* Smaller font size */
-  text-align: center;
-  width: 80px; /* Set a smaller width for buttons */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+font-weight: bold;
 }
 
 .edit-btn {
-  background-color:#2e27ae;
-}
+  background-color: #4CAF50; /* Green color for Edit */
+  color: white; /* White text */
+  margin-top: 23px;
+  width: 100px; /* Same width */
+  height: 40px; /* Same height */
+  font-size: 16px; /* Consistent font size */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Cursor to pointer */
+text-decoration: none;
+text-align: center; /* Center text */
+border-radius: 5px; /* Rounded corners */
+transition: background-color 0.3s ease; /* Smooth transition for hover */
+padding-top: 5px;
+font-weight: bold;
 
-.edit-btn:hover {
-  background-color:skyblue;
 }
 
 .delete-btn {
-  background-color: #e04d5c;
+  background-color: #f44336; /* Red color for Delete */
+  color: white; /* White text */
+}
+
+/* Hover effects */
+.edit-btn:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
 
 .delete-btn:hover {
-  background-color: #b90617;
+  background-color: #d32f2f; /* Darker red on hover */
 }
 
-/* Error Message */
-.error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 10px;
-}
-
-/* Pagination Styles */
+/* Pagination styles */
 .pagination-nav {
   display: flex;
   justify-content: center;
@@ -137,9 +118,9 @@
 }
 
 .pagination {
+  display: flex;
   list-style: none;
   padding: 0;
-  display: flex;
 }
 
 .page-item {
@@ -147,19 +128,24 @@
 }
 
 .page-link {
-  color: #007bff;
-  cursor: pointer;
-  padding: 10px 15px;
+  padding: 8px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  color: #007bff;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .page-item.active .page-link {
-  background-color: #0ea7ca;
-  color: white;
-  border-color: #1e1205;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
 }
+
+.page-link:hover {
+  background-color: #e9ecef;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
