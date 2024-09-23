@@ -73,13 +73,12 @@
 /* Buttons */
 .edit-btn {
   display: inline-block; /* Make it behave like a button */
-  padding: 10px; /* Add padding */
-  padding-top: 1.3px 1px;
-  background-color:#a3cce3; /* Background color */
+  padding: 10px 20px; /* Add padding */
+  background-color: #2e27ae; /* Background color */
   color: #ffffff; /* Text color */
   border: none; /* Remove border */
   border-radius: 5px; /* Rounded corners */
-  font-size: 15px; /* Font size */
+  font-size: 16px; /* Font size */
   font-weight: 600; /* Font weight */
   text-decoration: none; /* Remove underline */
   text-align: center; /* Center text */
