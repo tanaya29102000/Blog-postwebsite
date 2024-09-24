@@ -169,7 +169,6 @@ const UpdatePost = () => {
                   setImagePreview(URL.createObjectURL(event.currentTarget.files[0]));
                 }}
               />
-              {/* {imagePreview && <img src={imagePreview} alt="Preview" className="image-preview" />} */}
               {imagePreview && <img src={imagePreview} alt="Preview" className="image-preview" />}
 
               <ErrorMessage name="image" component="div" className="error-message" />
